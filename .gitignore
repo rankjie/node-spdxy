@@ -1,3 +1,4 @@
 *.log
 *.key
 *.crt
+.DS_Store
