@@ -1,4 +1,4 @@
-node-spdy-proxy
+Node-SPDXY
 ===============
 
 spdy/https proxy server based on node-spdy
@@ -10,7 +10,7 @@ node.js application.
 
 ###How To Use
 1. Get the code:
-> git clone --recursive https://github.com/rankjie/node-spdy-proxy.git
+> git clone --recursive https://github.com/rankjie/node-spdxy.git
 
 2. Get an SSL certificate for your domain.
 > A self signed certificate is acceptable, but you will have to import that certificate on your localmachine.
