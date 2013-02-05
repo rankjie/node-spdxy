@@ -7,30 +7,9 @@ It can be used as a standalone proxy server
 or being embedded and/or extended in another
 node.js application.
 
-###Why SPDY?
+###How To Use
 
-SPDY improves connection latency and throughput by
-compacting multiple streams in one tls connection and
-enabling gzip compression by default. According to Google,
-SPDY promises 27% to 60% speedup over HTTP and 39 - 55%
-over HTTPS [1].
-
-[1]: http://www.chromium.org/spdy/spdy-whitepaper/
-
-###What is the Purpose of node-spdy-proxy?
-
-By deploying a SPDY proxy between the client and the 
-non-SPDY-enabled Internet, it can potentially improve the
-Internet latency from the client's perspective. Especially
-when the connection between the browser and the actual
-website is slow, the full TCP roundtrips saved by SPDY
-can dramatically reduce the site loading times, the rationale
-behind Amazon Silk [2].
-
-A lightweight SPDY proxy written in Node.js offers the benefit
-of SPDY without the hassle of setting up a full-blown proxy
-server, and thus comes node-spdy-proxy.
-[2]: http://en.wikipedia.org/wiki/Amazon_Silk
+`git clone --recursive https://github.com/dndx/shadowsocks-libuv.git`
 
 ###Command Line Usage
 
@@ -54,9 +33,9 @@ each line terminated with \n
 
 `secure: {`
 
-`key`: tls key file, default to `key.pem`
+`key`: tls key file, default to `gfw.key`
 
-`cert`: tls certificate file, default to `cert.pem`
+`cert`: tls certificate file, default to `gfw.crt`
 
 `},`
 
@@ -64,14 +43,14 @@ each line terminated with \n
 
 `timeout`: Remote server timeout in milliseconds, the default is 10000ms
 
-`maxConnections`: Maximum number of connections, default to 100
+`maxConnections`: Maximum number of connections, default to 1000
 
 `noDelay`: Set nodelay for client and remote sockets, default to true
 
 `keepAlive`: Allow HTTP connections to keep-alive
 
-`host`: proxy server hostname, default to `localhost`
+`host`: Specified in the commandline, see Command Line Usage above
 
-`ip`: proxy server IP address, default to `127.0.0.1`
+`ip`: Auto Detected, you can manually change it, like `127.0.0.1`
 
-`port`: listening port, default to 8080.
+`port`: listening port, default to 5555.
