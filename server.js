@@ -19,11 +19,7 @@ var http = require('http'),
 	spdy = require('spdy'),
 	common = require('./common.js'),
 	parser = require('./parser.js');
-	
-	
-//Local IP address
-var s = net.createConnection(80, 'www.google.com');
-var defaultip = s.address().address;
+
 //Get hostname from argv
 var hostname = process.argv.slice(2)[0];
 
@@ -47,7 +43,7 @@ var defaultSettings = {
 	keepAlive: true,
 	host: hostname, //server address
 	// ip: '127.0.0.1',
-	ip: defaultip,
+	ip: '0.0.0.0',
 	port: 5555 //listening port
 };
 //version
