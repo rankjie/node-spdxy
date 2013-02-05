@@ -14,6 +14,7 @@
 */
 
 //settings
+var hostname = process.argv.slice(2)[0];
 var settings = {
 	DEBUG: true, //debug mode
 	noDelay: true,
@@ -21,11 +22,11 @@ var settings = {
 	port: 8088, //listening port
 	secure: {
 		enabled: true,
-		key: 'key.pem',
+		key: 'gfw.key',
 		ca: ''
 	},
-	remote_host: '127.0.0.1',
-	remote_port: 8086
+	remote_host: hostname,
+	remote_port: 5555
 };
 //imports
 var net = require('net'),

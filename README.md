@@ -14,7 +14,10 @@ node.js application.
 ###Command Line Usage
 
 `node server.js [hostname]` will run the
-server tith the hostname specified in the commandline.
+server with the hostname specified in the commandline.
+
+`node local.js [hostname]` will run the
+local-listener connect to the hostname specified in the commandline.
 
 ###Configurations
 
