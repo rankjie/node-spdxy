@@ -9,7 +9,7 @@ node.js application.
 
 ###How To Use
 
-`git clone --recursive https://github.com/dndx/shadowsocks-libuv.git`
+`git clone --recursive https://github.com/rankjie/node-spdy-proxy.git`
 
 ###Command Line Usage
 
