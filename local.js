@@ -1,8 +1,9 @@
 /* Node HTTPS Proxy
  * local side server test
  * @author xkx
- * @version 2.0.023
- * @copyright 2011
+ * @modified rankjie
+ * @version 2.0.024.2013.02.05
+ * @copyright 2013
  * @licence GPL 3.0
  *
  * Credits:

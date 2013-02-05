@@ -1,8 +1,9 @@
 /* Node SPDY Proxy
  * proxy server implementation
  * @author xkx
- * @version 2.0.024
- * @copyright 2011
+ * @modified rankjie
+ * @version 2.0.024.2013.02.05
+ * @copyright 2013
  * @licence GPL 3.0
  *
  * Credits:
@@ -16,7 +17,7 @@
 //imports
 var http = require('http'),
 	net = require('net'),
-	spdy = require('spdy'),
+	spdy = require('./nodespdy/lib/spdy'),
 	common = require('./common.js'),
 	parser = require('./parser.js');
 
