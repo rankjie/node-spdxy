@@ -32,7 +32,7 @@ var net = require('net'),
 	common = require('./common.js');
 	parser = require('./parser.js');
 //version
-var version = '2.0.023';
+var version = '2.0.024.2013.02.05';
 var log = common.log;
 
 //-------------here we go---------------------

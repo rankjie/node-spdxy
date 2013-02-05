@@ -12,10 +12,11 @@
  * Joyent's nodejs & log code from util.js
 */
 //version
-var version = exports.version = '2.0.024';
+var version = exports.version = '2.0.024.2013.02.05';
 
 exports.about = '/* Node HTTPS Proxy\n' +
 		' * @author xkx\n' +
+		' * @modified rankjie\n' +
 		' * @version ' + version + '\n' +
 		' * @copyright 2012\n' +
 		' * @licence GPL 3.0\n' +

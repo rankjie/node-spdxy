@@ -34,13 +34,8 @@ server, and thus comes node-spdy-proxy.
 
 ###Command Line Usage
 
-`runserver` will start the server with the
-configurations specified in proxy.conf and fallback
-to default settings if proxy.conf doesn't exist.
-
-`node server.js [config_file]` will run the
-server with the configurations specified in `config_file`
-if it is given, otherwise act the same as `runserver`
+`node server.js [hostname]` will run the
+server tith the hostname specified in the commandline.
 
 ###Configurations
 

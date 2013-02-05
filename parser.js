@@ -6,7 +6,7 @@
  * @licence GPL 3.0
 */
 //version
-exports.version = '2.0.024';
+exports.version = '2.0.024.2013.02.05';
 
 var common = require('./common.js'),
 	util   = require('util'),
@@ -136,7 +136,7 @@ var createHTML = function(title, body, additionals) {
 };
 
 var statusCat = function(statusCode, statusText) {
-	return '<div style="text-align:center;"><img src="http://httpstatusdogs.com/wp-content/uploads/2011/12/504.jpg' + statusCode +
+	return '<div style="text-align:center;"><img src="http://httpcats.herokuapp.com/' + statusCode +
 		'.jpg" alt="404" height="500"/><div>' + statusText + '</div></div>';
 };
 

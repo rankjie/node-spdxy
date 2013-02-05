@@ -12,37 +12,46 @@
  * Joyent's nodejs & log code from util.js
 */
 
+
 //imports
 var http = require('http'),
 	net = require('net'),
 	spdy = require('spdy'),
 	common = require('./common.js'),
 	parser = require('./parser.js');
+	
+	
+//Local IP address
+var s = net.createConnection(80, 'www.google.com');
+var defaultip = s.address().address;
+//Get hostname from argv
+var hostname = process.argv.slice(2)[0];
 
 //settings
 var defaultSettings = {
 	DEBUG: true, //debug mode
-	log_file: 'proxy.log', //log output
+	log_file: hostname+'_proxy.log', //log output
 	ip_blacklist: null,
 	host_blacklist: null,
 	user_ca: null, // check user cert against this CA
 	user_db: null, // json db for identify users
 	secure: {
 		// enabled: true, // spdy operates on tls
-		key: 'key.pem',
-		cert: 'cert.pem'
+		key: 'gfw.key',
+		cert: 'gfw.crt'
 	},
 	declineHTTP: false, //decline HTTP connections?
 	timeout: 10000, //Remote request timeout in milliseconds
 	maxConnections: 100,
 	noDelay: true,
 	keepAlive: true,
-	host: 'localhost', //server address
-	ip: '127.0.0.1',
-	port: 8080 //listening port
+	host: hostname, //server address
+	// ip: '127.0.0.1',
+	ip: defaultip,
+	port: 5555 //listening port
 };
 //version
-var version = '2.0.024';
+var version = '2.0.024.2013.02.05';
 var nodeVersion = process.version.slice(1, 4);
 if (version !== parser.version || version !== common.version) {
 	console.error("Server Exits: Component versions don't match");
