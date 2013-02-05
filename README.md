@@ -7,9 +7,14 @@ It can be used as a standalone proxy server
 or being embedded and/or extended in another
 node.js application.
 
-###How To Use
 
-`git clone --recursive https://github.com/rankjie/node-spdy-proxy.git`
+###How To Use
+1. Get the code:
+> `git clone --recursive https://github.com/rankjie/node-spdy-proxy.git`
+
+2. Get an SSL certificate for your domain.
+> A self signed certificate is acceptable, but you will have to import that certificate on your localmachine.
+I suggest you try **StartSSL** :)
 
 ###Command Line Usage
 
